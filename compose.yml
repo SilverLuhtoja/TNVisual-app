@@ -1,0 +1,23 @@
+services:
+  frontend:
+   image: busybox
+   environment:
+      - "COMPOSE_PROJECT_NAME"
+   command: echo "I'm running ${COMPOSE_PROJECT_NAME}"
+    # image: example/webapp
+    # ports:
+      # - "443:8043"
+    # networks:
+      # - front-tier
+      # - back-tier
+    # configs:
+      # - httpd-config
+    # secrets:
+      # - server-certificate
+
+  # backend:
+    # image: example/database
+    # volumes:
+      # - db-data:/etc/data
+    # networks:
+      # - back-tier

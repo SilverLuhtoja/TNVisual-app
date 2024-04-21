@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        @apply text-primary-text;
+    }
+
+    h1 {
+        @apply text-2xl sm:text-3xl;
+    }
+    h2 {
+        @apply text-xl;
+    }
+    /* ... */
+}
+
+.custom-section-bg-image {
+    /* @apply bg-home-bg bg-center bg-no-repeat bg-[length:100vw_100vh] */
+    @apply h-[100vh] bg-center bg-no-repeat bg-cover;
+}
+
+.divider {
+    @apply h-[2px] mt-4  w-1/3 sm:w-1/2  m-auto bg-border-brown bg-opacity-50;
+}
+
+.action-btn {
+    @apply my-5 m-auto p-4 py-3 bg-green-400 border-2 border-emerald-700 rounded text-lg font-semibold hover:bg-green-300  transition-all duration-300 hover:shadow-[5px_5px_4px_0px_rgba(0,0,0,0.3)] hover:border-emerald-600;
+}
+
+.disabled-action-btn{
+    @apply my-5 m-auto p-4 py-3 bg-slate-400 border-2 rounded text-lg font-semibold cursor-default;
+}
+
+
+.project-modal-input{
+    @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white
+}
+.project-modal-preview{
+    @apply max-w-96 w-96 h-56 overflow-hidden bg-slate-50 flex justify-center items-center rounded border-4 border-border-brown
+}
