@@ -1,7 +1,5 @@
-const { VITE_BACKEND_BASE_URL } = import.meta.env
-
 class Client {
-    url = VITE_BACKEND_BASE_URL
+    url = import.meta.env.VITE_BACKEND_BASE_URL || 'any-default-local-build'
     headers = {
         'Content-Type': 'application/json',
         'Authorization': '',
