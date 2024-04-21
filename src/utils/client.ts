@@ -4,6 +4,7 @@ class Client {
     url = VITE_BACKEND_BASE_URL
     headers = {
         'Content-Type': 'application/json',
+        'Authorization': '',
     }
 
     SetApiKey(key :string){

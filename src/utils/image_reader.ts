@@ -8,6 +8,6 @@ export  async function getImageFileContents(file :any){
         // image.value = e.target.result
         // console.log(e.target.result);
         
-        return  e.target.result
+        return  e.target?.result
     }
 }

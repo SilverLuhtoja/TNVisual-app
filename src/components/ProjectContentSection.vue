@@ -3,14 +3,14 @@ import { defineProps } from 'vue'
 
 const { imageContents } = defineProps(['imageContents'])
 
-const onImageSelect = async (event, content) => {
+const onImageSelect = async (event: any, content: any) => {
     const file = event.target.files[0]
 
     if (file) {
         const reader = new FileReader()
         reader.readAsDataURL(file)
         reader.onload = function (e) {
-            content.file = e.target.result
+            content.file = e.target?.result
         }
     }
 }
