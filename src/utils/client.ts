@@ -37,6 +37,8 @@ class Client {
     }
 
     async post(endpoint: string, data: any) {
+        console.log("SENDING REQUEST TO : ", this.url + endpoint);
+        
         try {
             const response = await fetch(this.url + endpoint, {
                 method: 'POST', // or 'PUT'
