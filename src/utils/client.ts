@@ -1,16 +1,17 @@
-const { VITE_BACKEND_BASE_URL } = import.meta.env
+const { VITE_BACKEND_BASE_URL, VITE_AWS_BACKEND_BASE_URL } = import.meta.env
 
 class Client {
-    url = VITE_BACKEND_BASE_URL
+    // url = VITE_BACKEND_BASE_URL
+    url = VITE_AWS_BACKEND_BASE_URL
     headers = {
         'Content-Type': 'application/json',
         'Authorization': '',
     }
-
+    
     SetApiKey(key :string){
         this.headers['Authorization'] = `ApiKey ${key}`;
     }
-
+    
     async get(endpoint: string) {
         try {
             const response = await fetch(this.url + endpoint, {
