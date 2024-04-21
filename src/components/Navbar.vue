@@ -4,11 +4,13 @@ import estoniaFlag from '@/assets/images/home/estoniaFlag.png'
 import englishFlag from '@/assets/images/home/englishFlag.png'
 import burgerSvg from '@/assets/icons/burger.svg'
 import LoginButton from '@/components/LoginButton.vue'
-import { ref} from 'vue'
+import { onMounted, ref} from 'vue'
 import { inject } from 'vue'
+import client from '@/utils/client'
 
 const state = inject('state')
 const menu = ref('menu')
+const health = ref(null)
 
 const showMenu = () => {
     if (menu.value.classList.contains('hidden')) {
@@ -21,6 +23,13 @@ const showMenu = () => {
 function scrollTo(id) {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
 }
+
+onMounted(async () => {
+    let response = await client.get("/health")
+    console.log(response)
+
+    health.value = response.body
+})
 </script>
 
 <template>
@@ -32,6 +41,8 @@ function scrollTo(id) {
                     <h1 class="font-semibold text-3xl m-2 cursor-pointer">TNVisual</h1>
                     <div v-if="state.isAdmin">Admin</div>
                     <LoginButton v-else="state.isAdmin" />
+
+                    <div> {{ health }}</div>
                 </div>
 
                 <div class="flex">
