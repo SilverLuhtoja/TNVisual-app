@@ -28,8 +28,8 @@ class Client {
             return { body: result }
         } catch (error) {
             console.log(error);
-
-            return { error: 'Service is unavailable' }
+            let message = `Service is unavailable: ${error}`
+            return { error: message }
         }
     }
 
@@ -54,8 +54,8 @@ class Client {
             return { body: result }
         } catch (error) {
             console.log(error);
-            
-            return { error: 'Service is unavailable' }
+            let message = `Service is unavailable: ${error}`
+            return { error: message }
         }
     }
 }
