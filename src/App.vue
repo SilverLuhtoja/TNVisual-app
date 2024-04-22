@@ -16,15 +16,15 @@ const { VITE_TESTING_APIKEY_ONLY } = import.meta.env
 const state: any = inject('state')
 
 //  send api key to backend and see if there is any users with that key, if yes it can stay logged in as admin
-onMounted(async () => {
-    console.log('LOGIN AS ADMIN')
-    client.SetApiKey(VITE_TESTING_APIKEY_ONLY)
-    const response = await client.post('/auth', "")
+// onMounted(async () => {
+//     console.log('LOGIN AS ADMIN')
+//     client.SetApiKey(VITE_TESTING_APIKEY_ONLY)
+//     const response = await client.post('/auth', "")
 
-    if (!response.error) {
-        state.isAdmin = true
-    }
-})
+//     if (!response.error) {
+//         state.isAdmin = true
+//     }
+// })
 
 </script>
 

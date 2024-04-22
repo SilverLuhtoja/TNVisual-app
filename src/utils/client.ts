@@ -10,6 +10,7 @@ class Client {
     }
     
     async get(endpoint: string) {
+        console.log("SENDING REQUEST TO : ", this.url + endpoint);
         try {
             const response = await fetch(this.url + endpoint, {
                 method: 'GET', // or 'PUT'
