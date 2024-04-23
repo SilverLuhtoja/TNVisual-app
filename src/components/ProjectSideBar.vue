@@ -1,8 +1,7 @@
-<script setup >
+<script setup>
 import triangleSvg from '@/assets/icons/triangle.svg'
 import AddProjectModal from '@/components/AddProjectModal.vue'
-import { ref, defineProps } from 'vue'
-
+import { defineProps } from 'vue'
 
 const { allProjects, active, changeActive } = defineProps(['allProjects', 'active', 'changeActive'])
 </script>

@@ -1,6 +1,6 @@
 <script setup>
-import {inject, ref, reactive } from 'vue'
-import client from "@/utils/client"
+import { inject, ref, reactive } from 'vue'
+import client from '@/utils/client'
 
 const state = inject('state')
 const show = ref(false)
@@ -17,15 +17,13 @@ const showLoginModal = () => {
 const login = async () => {
     errorMessage.value = ''
 
-    const response = await client.post("/login", loginModel)
+    const response = await client.post('/login', loginModel)
 
-    if (response.error){
+    if (response.error) {
         errorMessage.value = response.error
         return
     }
-    
-    console.log("succesfully loged in ");
-    console.log(response.body);
+
     show.value = false
     state.isAdmin = true
 }

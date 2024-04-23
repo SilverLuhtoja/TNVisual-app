@@ -1,3 +1,33 @@
+# FRONTEND:
+### Views [ DESKTOP ]:
+
+    [x] - Navbar
+    [x] - Home 
+    [ ] - Completed Projects 
+        * needs possibility to delete project
+        * needs improvements
+    [x] - How would we collaborate
+    [ ] - Contacts
+        * needs some feedback when email is sent
+
+### Views [ MOBILE ]:
+
+    [x] - Navbar
+    [x] - Home
+    [ ] - Completed Projects
+    [x] - How would we collaborate
+    [ ] - Contacts
+
+### Other needed things:
+    [ ] - Localisation
+    [ ] - SEO
+
+## GOOD TO HAVE ADDITIONS
+    [ ] - Caching ( maybe to add already fetched projects to front store OR save already fetched projects to somewhere to fast return when requested )
+
+
+<br><br>
+
 # tnvisual
 
 This template should help get you started developing with Vue 3 in Vite.

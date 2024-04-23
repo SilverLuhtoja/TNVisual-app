@@ -14,7 +14,6 @@ const collabItems: CollaborationDomain[] = mapResourceToDomain(resource, (item: 
 
 const goToContactView = () => {
     document.getElementById('contacts')?.scrollIntoView({ behavior: 'smooth' })
-    
 }
 </script>
 
@@ -25,6 +24,8 @@ const goToContactView = () => {
             <p class="mt-4">{{ item.description }}</p>
             <div class="divider"></div>
         </div>
-       <button @click="goToContactView" class="action-btn hover:action-btn-hover">Let's get started</button>
+        <button @click="goToContactView" class="action-btn hover:action-btn-hover">
+            Let's get started
+        </button>
     </div>
 </template>
