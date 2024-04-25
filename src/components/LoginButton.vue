@@ -20,7 +20,7 @@ const login = async () => {
     const response = await client.post('/login', loginModel)
 
     if (response.error) {
-        errorMessage.value = response.error
+        errorMessage.value = "Mismatched credentials"
         return
     }
 
