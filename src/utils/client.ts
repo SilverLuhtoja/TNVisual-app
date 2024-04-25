@@ -19,7 +19,7 @@ class Client {
             })
 
             const result = await response.json()
-            if (response.status > 400) {
+            if (response.status >= 400) {
                 console.log('Error:', result.error)
                 return { error: result.error }
             }
@@ -45,7 +45,7 @@ class Client {
             })
 
             const result = await response.json()
-            if (response.status > 400) {
+            if (response.status >= 400) {
                 console.log('Error:', result.error)
                 return { error: result.error }
             }

@@ -30,7 +30,6 @@ const closeProjectModel = () => {
 }
 
 const submitProject = async () => {
-    console.log('SENDING DATA')
     errorMessage.value = ""
     const response = await client.post("/projects", projectModel)
 
