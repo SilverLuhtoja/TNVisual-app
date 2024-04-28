@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import ProjectSideBar from '@/components/ProjectSideBar.vue'
 import ProjectShowcase from '@/components/ProjectShowcase.vue'
-import { ref, onMounted, reactive } from 'vue'
+import { ref, onMounted } from 'vue'
 import { mapResourceToDomain } from '@/utils/mapper'
 import client from '@/utils/client'
 
@@ -27,7 +27,14 @@ const activePictureIndex = ref(1)
 onMounted(async () => {
     errorMessage.value = null
     try {
-        const response = await client.get('/projects')
+        await getAllProjects()
+    } catch (error: any) {
+        errorMessage.value = error.message
+    }
+})
+
+const getAllProjects = async () => {
+      const response = await client.get('/projects')
 
         if (response.error) {
             errorMessage.value = response.error
@@ -40,10 +47,7 @@ onMounted(async () => {
         }
 
         initProjectView(response)
-    } catch (error: any) {
-        errorMessage.value = error.message
-    }
-})
+}
 
 const changeActive = (projectName: string) => {
     resetProjectView()
@@ -101,6 +105,7 @@ const resetProjectView = () => {
                     :allProjects="AllProjectsNames"
                     :active="active"
                     :changeActive="changeActive"
+                    :getAllProjects="getAllProjects"
                 />
             </div>
             <div class="w-4/5 m-20">

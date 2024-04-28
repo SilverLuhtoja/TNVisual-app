@@ -1,8 +1,9 @@
 <script setup>
-import { ref, inject, reactive } from 'vue'
+import { ref, inject, reactive, defineProps} from 'vue'
 import client from "@/utils/client"
 import ProjectContentSection from './ProjectContentSection.vue'
 
+const { getAllProjects } = defineProps(['getAllProjects'])
 const state = inject('state')
 const show = ref(false)
 const errorMessage = ref(null)
@@ -39,6 +40,7 @@ const submitProject = async () => {
         return
     }
     show.value = false
+    getAllProjects()
     clearProjectModel()
 }
 

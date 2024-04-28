@@ -14,6 +14,15 @@ const showLoginModal = () => {
     show.value = !show.value
 }
 
+const setKey = async () => {
+    const response = await client.get('/verify')
+
+    if (!response.error) {
+        client.SetApiKey(response.body)
+        state.isAdmin = true
+    }
+}
+
 const login = async () => {
     errorMessage.value = ''
 
@@ -25,7 +34,7 @@ const login = async () => {
     }
 
     show.value = false
-    state.isAdmin = true
+    setKey()
 }
 </script>
 
