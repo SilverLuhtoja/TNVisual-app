@@ -18,6 +18,7 @@ onMounted(async () => {
         state.isAdmin = true
     }
 })
+
 </script>
 
 <template>

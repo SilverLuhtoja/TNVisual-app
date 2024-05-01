@@ -1,0 +1,12 @@
+{
+    "navbar": {
+        "projects": "valmis projektid",
+        "collaborate": "kuidas teeme koostööd",
+        "contacts": "kontaktid"
+    },
+    "projects": {
+        "projectsTitle": "projektid"
+    },
+    "collaborate": {},
+    "contacts": {}
+}

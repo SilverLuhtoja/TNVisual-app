@@ -54,14 +54,14 @@ function scrollTo(id) {
             </div>
 
             <div class="routes text-xl sm:text-base hidden flex-col gap-2 sm:flex-row p-4 sm:flex" ref="menu">
-                <h4 @click="scrollTo('projects')" class="cursor-pointer m-4">COMPLETED PROJECTS</h4>
-                <h4 @click="scrollTo('collaborate')" class="cursor-pointer m-4">HOW WOULD WE COLLABORATE</h4>
-                <h4 @click="scrollTo('contacts')" class="cursor-pointer m-4">CONTACTS</h4>
+                <h4 @click="scrollTo('projects')" class="cursor-pointer m-4">{{ $t('navbar.projects').toUpperCase()}}</h4>
+                <h4 @click="scrollTo('collaborate')" class="cursor-pointer m-4">{{$t('navbar.collaborate').toUpperCase()}}</h4>
+                <h4 @click="scrollTo('contacts')" class="cursor-pointer m-4">{{$t('navbar.contacts').toUpperCase()}}</h4>
             </div>
         </div>
             <div class="hidden p-2 absolute bottom-00 right-0 sm:flex justify-center gap-3 cursor-pointer">
-            <img class="w-[50px] border-2 border-border-brown" :src="estoniaFlag" alt="Eesti" />
-            <img class="w-[50px] border-2 border-border-brown" :src="englishFlag" alt="Inglise" />
+            <img @click="$i18n.locale = 'est'" class="w-[50px] border-2 border-border-brown" :src="estoniaFlag" alt="Eesti" />
+            <img @click="$i18n.locale = 'en'" class="w-[50px] border-2 border-border-brown" :src="englishFlag" alt="Inglise" />
         </div>
     </header>
 </template>

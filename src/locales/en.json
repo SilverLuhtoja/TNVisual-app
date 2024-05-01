@@ -1,0 +1,16 @@
+{
+    "navbar": {
+        "projects": "completed projects",
+        "collaborate": "how would we collaborate",
+        "contacts": "contacts" 
+    },
+    "projects" :{
+        "projectsTitle" : "projects"
+    },
+    "collaborate": {
+        
+    },
+    "contacts": {
+
+    }
+}
