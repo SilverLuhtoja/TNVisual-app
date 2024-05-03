@@ -18,7 +18,7 @@
 
 .custom-section-bg-image {
     /* @apply bg-home-bg bg-center bg-no-repeat bg-[length:100vw_100vh] */
-    @apply h-[100vh] bg-center bg-no-repeat bg-cover;
+    @apply min-h-[100vh] bg-center bg-no-repeat bg-cover;
 }
 
 .divider {
@@ -39,4 +39,8 @@
 }
 .project-modal-preview{
     @apply max-w-96 w-96 h-56 overflow-hidden bg-slate-50 flex justify-center items-center rounded border-4 border-border-brown
+}
+
+.transition{
+     @apply transition-all duration-300 hover:shadow-[5px_5px_4px_0px_rgba(0,0,0,0.3)];
 }

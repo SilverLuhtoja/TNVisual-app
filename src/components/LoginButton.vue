@@ -29,7 +29,7 @@ const login = async () => {
     const response = await client.post('/login', loginModel)
 
     if (response.error) {
-        errorMessage.value = "Mismatched credentials"
+        errorMessage.value = 'Mismatched credentials'
         return
     }
 
@@ -40,10 +40,10 @@ const login = async () => {
 
 <template>
     <div
-        class="p-2 bg-red-200 cursor-pointer transition-all duration-300 hover:bg-red-300 hover:rounded-lg hover:px-4"
+        class="mt-[-1em] text-2xl cursor-default transition-all duration-300 hover:font-bold"
         @click="showLoginModal"
     >
-        LogIn [temp.]
+        *
     </div>
     <!-- Main modal -->
     <div
@@ -103,7 +103,7 @@ const login = async () => {
                                 id="username"
                                 v-model="loginModel.username"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="silver"
+                                placeholder="Johnny Toe"
                                 required
                             />
                         </div>

@@ -1,14 +1,15 @@
 <script setup>
-import logoImage from '@/assets/images/home/logo.png'
-import estoniaFlag from '@/assets/images/home/estoniaFlag.png'
-import englishFlag from '@/assets/images/home/englishFlag.png'
+import logoImage from '@/assets/images/navbar/logo.png'
+import estoniaFlag from '@/assets/images/navbar/estonia.png'
+import englishFlag from '@/assets/images/navbar/english.png'
 import burgerSvg from '@/assets/icons/burger.svg'
 import LoginButton from '@/components/LoginButton.vue'
-import {  ref} from 'vue'
+import {onBeforeMount, ref} from 'vue'
 import { inject } from 'vue'
 
 const state = inject('state')
 const menu = ref('menu')
+let windowTop = ref(true)
 
 const showMenu = () => {
     if (menu.value.classList.contains('hidden')) {
@@ -21,15 +22,30 @@ const showMenu = () => {
 function scrollTo(id) {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
 }
+
+onBeforeMount(() => {
+    window.addEventListener( 'scroll', handleScroll)
+})
+
+const handleScroll = () => {
+    if (window.scrollY > 0) {
+        windowTop.value = false 
+    } else {
+        windowTop.value = true
+    }
+}
 </script>
 
 <template>
-    <header class="sticky top-0 border-b-4 border-border-brown text-primary-text z-10 shadow-[0_0_4px_6px_rgba(0,0,0,0.3)]">
-        <div class="h-full sm:h-[10vh] flex flex-col sm:flex-row sm:justify-between sm:items-center bg-white">
+    <header class="fixed w-[100vw] top-0 border-b-4 border-border-brown text-primary-text z-10 shadow-[0_0_4px_6px_rgba(0,0,0,0.3)] ">
+        <div :class="{'opacity-75': !windowTop} " class="flex flex-col sm:flex-row sm:justify-between sm:items-center bg-white hover:opacity-100 transition ">
             <div class="flex justify-between items-center m-3">
-                <div @click="scrollTo('home')" class="flex items-center">
-                    <img :src="logoImage" alt="logoImage" />
-                    <h1 class="font-semibold text-3xl m-2 cursor-pointer">TNVisual</h1>
+                <div class="flex items-center">
+                    <div @click="scrollTo('home')" class="flex items-center">
+                        <img :src="logoImage" alt="logoImage" />
+                        <h1 class="font-semibold text-3xl m-2 cursor-pointer">TNVisual</h1>
+                    </div>
+
                     <div v-if="state.isAdmin">Admin</div>
                     <LoginButton v-else="state.isAdmin" />
                 </div>
@@ -53,15 +69,29 @@ function scrollTo(id) {
                 </div>
             </div>
 
-            <div class="routes text-xl sm:text-base hidden flex-col gap-2 sm:flex-row p-4 sm:flex" ref="menu">
-                <h4 @click="scrollTo('projects')" class="cursor-pointer m-4">COMPLETED PROJECTS</h4>
-                <h4 @click="scrollTo('collaborate')" class="cursor-pointer m-4">HOW WOULD WE COLLABORATE</h4>
-                <h4 @click="scrollTo('contacts')" class="cursor-pointer m-4">CONTACTS</h4>
+            <div class="routes text-xl sm:text-base hidden flex-col gap-2 sm:flex-row px-4 sm:flex" ref="menu">
+                <h4 @click="scrollTo('projects')" class="cursor-pointer m-4">{{ $t('navbar.portfolio').toUpperCase()}}</h4>
+                <h4 @click="scrollTo('collaborate')" class="cursor-pointer m-4">{{$t('navbar.services').toUpperCase()}}</h4>
+                <h4 @click="scrollTo('about')" class="cursor-pointer m-4">{{$t('navbar.about').toUpperCase()}}</h4>
+                <h4 @click="scrollTo('contacts')" class="cursor-pointer m-4">{{$t('navbar.contacts').toUpperCase()}}</h4>
             </div>
         </div>
-            <div class="hidden p-2 absolute bottom-00 right-0 sm:flex justify-center gap-3 cursor-pointer">
-            <img class="w-[50px] border-2 border-border-brown" :src="estoniaFlag" alt="Eesti" />
-            <img class="w-[50px] border-2 border-border-brown" :src="englishFlag" alt="Inglise" />
+        <div class="hidden mx-4 my-3  absolute bottom-00 right-0 sm:flex justify-center cursor-pointer">
+            <img @click="$i18n.locale = 'est'" :class="{'flag-opacity': $i18n.locale != 'est'}" class="rotate w-[50px] transition mx-[-0.5em]" :src="estoniaFlag" alt="Eesti" />
+            <img @click="$i18n.locale = 'en'" :class="{'flag-opacity': $i18n.locale != 'en'}"  class="rotate w-[50px] transition" :src="englishFlag" alt="Inglise" />
         </div>
     </header>
 </template>
+
+
+<style scoped>
+.flag-opacity{
+    scale: 0.60 100%;
+    opacity: 0.6;
+}
+
+.rotate{
+   transform: rotate(90deg);
+   margin-left: -10px;
+}
+</style>

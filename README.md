@@ -19,7 +19,7 @@
     [ ] - Contacts
 
 ### Other needed things:
-    [ ] - Localisation
+    [x] - Localisation
     [ ] - SEO
 
 ## GOOD TO HAVE ADDITIONS
