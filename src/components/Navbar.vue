@@ -40,11 +40,13 @@ const handleScroll = () => {
     <header class="fixed w-[100vw] top-0 border-b-4 border-border-brown text-primary-text z-10 shadow-[0_0_4px_6px_rgba(0,0,0,0.3)] ">
         <div :class="{'opacity-75': !windowTop} " class="flex flex-col sm:flex-row sm:justify-between sm:items-center bg-white hover:opacity-100 transition ">
             <div class="flex justify-between items-center m-3">
-                <div @click="scrollTo('home')" class="flex items-center">
-                    <img :src="logoImage" alt="logoImage" />
-                    <h1 class="font-semibold text-3xl m-2 cursor-pointer">TNVisual</h1>
-                    <div v-if="state.isAdmin">Admin</div>
+                <div class="flex items-center">
+                    <div @click="scrollTo('home')" class="flex items-center">
+                        <img :src="logoImage" alt="logoImage" />
+                        <h1 class="font-semibold text-3xl m-2 cursor-pointer">TNVisual</h1>
+                    </div>
 
+                    <div v-if="state.isAdmin">Admin</div>
                     <LoginButton v-else="state.isAdmin" />
                 </div>
 
