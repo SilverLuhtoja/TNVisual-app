@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup >
 import linkedin from '@/assets/images/contact/linkedin.png'
 import facebook from '@/assets/images/contact/facebook.png'
 import instagram from '@/assets/images/contact/instagram.png'
