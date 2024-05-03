@@ -1,16 +1,38 @@
 {
     "navbar": {
-        "projects": "completed projects",
-        "collaborate": "how would we collaborate",
-        "contacts": "contacts" 
+        "portfolio": "portfolio",
+        "services": "services",
+        "about": "about me",
+        "contacts": "contacts"
     },
-    "projects" :{
-        "projectsTitle" : "projects"
+    "portfolio": {
+        "title": "projects"
     },
-    "collaborate": {
-        
+    "services": {
+        "title1": "Concept creation",
+        "description1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duisaute irure dolor in reprehenderit in voluptate",
+
+        "title2": "Taking the measurements",
+        "description2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duisaute irure dolor in reprehenderit in voluptate",
+
+        "title3": "Creation of initial sketches and discussion with the client",
+        "description3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duisaute irure dolor in reprehenderit in voluptate",
+
+        "title4": "Final drawings with the necessary technical communications (electrical installations, lighting, water, sewage, ventilation)",
+        "description4": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duisaute irure dolor in reprehenderit in voluptate",
+
+        "button": "Let's get started"
+    },
+    "about": {
+        "title": "About Company & Me",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duisaute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu  fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserun \n\n mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing  elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat  non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "phoneDescription": "Phone number"
     },
     "contacts": {
-
+        "title": "Lets start our partnership",
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam placeat eos eum voluptatem magni architecto ullam consequuntur voluptatibus amet quos, praesentium earum iusto minus autem sapiente repellendus accusamus exercitationem aperiam omnis nesciunt! Iure minus nisi impedit sunt adipisci, aliquam praesentium tenetur iste assumenda odit obcaecati, iusto similique.",
+        "emailDescription": "Email to contact",
+        "projectDescription": "Specifications of project",
+        "button": "To Ship"
     }
 }

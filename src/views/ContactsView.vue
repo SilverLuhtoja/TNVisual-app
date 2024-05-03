@@ -1,9 +1,7 @@
 <script setup>
 import { reactive, ref } from 'vue'
 import { validateEmail } from '@/utils/email_validator'
-import linkedin from '@/assets/images/contact/linkedin.png'
-import facebook from '@/assets/images/contact/facebook.png'
-import instagram from '@/assets/images/contact/instagram.png'
+
 
 const errorMessage = ref(null)
 const emailContent = reactive({
@@ -45,53 +43,22 @@ const sendEmail = () => {
 </script>
 <template>
     <main class="relative !h-fit bg-contact-bg custom-section-bg-image flex justify-center">
-        <div class="gap-10 p-10 flex flex-col items-center md:flex-row md:gap-20 md:m-20">
-            <section class="w-[500px] flex-col text-white">
-                <h1 class="mb-10 border-border-brown border-b-2 md:w-fit">About Company & Me</h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt
-                    <br /><br />
-                    mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing
-                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-                <div class="mt-10 flex gap-10">
-                    <a href="https://www.facebook.com/search/top?q=tnvisual">
-                        <img class="md:w-fit" :src="facebook" />
-                    </a>
-                    <a href="https://www.linkedin.com/company/tnvisual/">
-                        <img class="md:w-fit" :src="linkedin" />
-                    </a>
-                    <a href="#contacts">
-                        <img class="md:w-fit" :src="instagram" />
-                        <div> !! needs link !!</div>
-                    </a>
-                </div>
+        <div class="gap-10  flex flex-col items-center md:flex-row md:gap-20 md:m-20">
 
-                <div class="mt-4 italic p-4 bg-black/50 md:w-fit border-border-brown border-l-4">
-                    <p>Phone number: +372 5656 1234</p>
-                    <p>Email: tnvisaul@gmail.com</p>
-                </div>
-            </section>
-            <section>
+           <section>
                 <h1 class="text-white m-auto text-center mb-10 max-w-[16rem]">
-                    Lets start our partnership
+                   {{ $t('contacts.title' )}}
                 </h1>
+                <p class="w-[700px] text-white m-10 text-center p-10 flex flex-col gap-10"> 
+                    {{ $t('contacts.description' )}}
+                </p>
 
-                <div class="w-[500px] bg-slate-200/50 p-10 flex flex-col gap-10">
+                <div class="m-auto  w-[500px] bg-slate-200/50 p-10 flex flex-col gap-10">
                     <div>
                         <label
                             for="client_email"
                             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                            >Email to contact*</label
+                            > {{ $t('contacts.emailDescription' )}} *</label
                         >
                         <input
                             type="text"
@@ -106,7 +73,7 @@ const sendEmail = () => {
                         <label
                             for="client_project_desc"
                             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                            >Specifications of project*</label
+                            >{{ $t('contacts.projectDescription' )}}*</label
                         >
                         <textarea
                             rows="8"
@@ -127,11 +94,11 @@ const sendEmail = () => {
                             {{ errorMessage }}
                         </div>
                         <button @click="sendEmail" class="action-btn !px-6 !py-1 !my-0">
-                            To Ship
+                            {{ $t('contacts.button' )}}
                         </button>
                     </div>
                 </div>
-            </section>
+            </section> 
         </div>
     </main>
 </template>

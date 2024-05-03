@@ -95,7 +95,7 @@ const resetProjectView = () => {
     >
         <div
             v-if="errorMessage"
-            class="absolute m-10 p-6 w-72 bg-slate-200 font-semibold text-red-500 rounded"
+            class="absolute m-6 p-2 bg-slate-100  text-red-500 rounded"
         >
             {{ errorMessage }}
         </div>

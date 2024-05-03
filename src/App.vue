@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar.vue'
 import HomeView from '@/views/HomeView.vue'
 import ProjectsView from '@/views/ProjectsView.vue'
 import CollaborationView from '@/views/CollaborationView.vue'
+import AboutView from '@/views/AboutView.vue'
 import ContactsView from '@/views/ContactsView.vue'
 import { inject, onMounted } from 'vue'
 import client from '@/utils/client'
@@ -27,6 +28,7 @@ onMounted(async () => {
         <HomeView id="home" />
         <ProjectsView id="projects" />
         <CollaborationView id="collaborate" />
+        <AboutView id="about" />
         <ContactsView id="contacts" />
         <!-- <RouterView /> -->
     </div>

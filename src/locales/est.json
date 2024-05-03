@@ -1,12 +1,38 @@
 {
     "navbar": {
-        "projects": "valmis projektid",
-        "collaborate": "kuidas teeme koostööd",
+        "portfolio": "portfoolio",
+        "services": "teenused",
+        "about": "minust",
         "contacts": "kontaktid"
     },
-    "projects": {
-        "projectsTitle": "projektid"
+    "portfolio": {
+        "title": "projektid"
     },
-    "collaborate": {},
-    "contacts": {}
+    "services": {
+        "title1": "Kontseptsiooni loomine",
+        "description1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duisaute irure dolor in reprehenderit in voluptate",
+
+        "title2": "Ruumi mõõdistamine",
+        "description2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duisaute irure dolor in reprehenderit in voluptate",
+
+        "title3": "Esmaste eskiiside loomine ja arutelu kliendiga",
+        "description3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duisaute irure dolor in reprehenderit in voluptate",
+
+        "title4": "Lõplikud joonised vajalike tehniliste kommunikatsioonidega (elektripaigaldised, valgustus, vesi, kanalisatsioon, ventilatsioon)",
+        "description4": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duisaute irure dolor in reprehenderit in voluptate",
+
+        "button": "Alustame kohe"
+    },
+    "about": {
+        "title": "Firmast & Minust",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duisaute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu  fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserun \n\n mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing  elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat  non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "phoneDescription": "Telefoni number"
+    },
+    "contacts": {
+        "title": "Partnerlus alaku",
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam placeat eos eum voluptatem magni architecto ullam consequuntur voluptatibus amet quos, praesentium earum iusto minus autem sapiente repellendus accusamus exercitationem aperiam omnis nesciunt! Iure minus nisi impedit sunt adipisci, aliquam praesentium tenetur iste assumenda odit obcaecati, iusto similique.",
+        "emailDescription": "Kontakti email",
+        "projectDescription": "Projekti tutvustus",
+        "button": "Lööme Käed"
+    }
 }

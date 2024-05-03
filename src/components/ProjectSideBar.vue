@@ -6,7 +6,7 @@ import { defineProps } from 'vue'
 const { allProjects, active, changeActive, getAllProjects } = defineProps(['allProjects', 'active', 'changeActive', 'getAllProjects'])
 </script>
 <template>
-    <h1 class="ml-16 tracking-[1rem] underline mt-10">{{$t('projects.projectsTitle').toUpperCase()}}</h1>
+    <h1 class="ml-16 tracking-[1rem] underline mt-10">{{$t('portfolio.title').toUpperCase()}}</h1>
     <AddProjectModal :getAllProjects="getAllProjects" />
     <div class="ml-24 mt-10">
         <div class="mt-4" v-for="(project, index) in allProjects" :key="index">
