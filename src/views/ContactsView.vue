@@ -1,4 +1,4 @@
-<script setup>
+<script setup >
 import { reactive, ref } from 'vue'
 import { validateEmail } from '@/utils/email_validator'
 

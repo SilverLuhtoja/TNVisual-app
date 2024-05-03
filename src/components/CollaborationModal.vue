@@ -1,16 +1,11 @@
-<script setup lang="ts">
+<script setup>
 import resource from '../locales/en.json'
-
-interface CollaborationDomain {
-    title: string
-    description: string
-}
 
 const collabItems = mapKeysToDomain()
 
 function mapKeysToDomain(){
-    let collabItems: CollaborationDomain[] = [];
-    let singleItem: CollaborationDomain = {title:"", description:""};
+    let collabItems= [];
+    let singleItem = {title:"", description:""};
       for (let key in resource.services){
         if(key.match('title')){
             singleItem.title = key
