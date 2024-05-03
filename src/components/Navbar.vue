@@ -1,7 +1,7 @@
 <script setup>
-import logoImage from '@/assets/images/home/logo.png'
-import estoniaFlag from '@/assets/images/home/estoniaFlag.png'
-import englishFlag from '@/assets/images/home/englishFlag.png'
+import logoImage from '@/assets/images/navbar/logo.png'
+import estoniaFlag from '@/assets/images/navbar/estonia.png'
+import englishFlag from '@/assets/images/navbar/english.png'
 import burgerSvg from '@/assets/icons/burger.svg'
 import LoginButton from '@/components/LoginButton.vue'
 import {onBeforeMount, ref} from 'vue'
@@ -75,7 +75,7 @@ const handleScroll = () => {
             </div>
         </div>
         <div class="hidden mx-4 my-3  absolute bottom-00 right-0 sm:flex justify-center cursor-pointer">
-            <img @click="$i18n.locale = 'est'" :class="{'flag-opacity': $i18n.locale != 'est'}" class="rotate w-[50px] transition" :src="estoniaFlag" alt="Eesti" />
+            <img @click="$i18n.locale = 'est'" :class="{'flag-opacity': $i18n.locale != 'est'}" class="rotate w-[50px] transition mx-[-0.5em]" :src="estoniaFlag" alt="Eesti" />
             <img @click="$i18n.locale = 'en'" :class="{'flag-opacity': $i18n.locale != 'en'}"  class="rotate w-[50px] transition" :src="englishFlag" alt="Inglise" />
         </div>
     </header>
